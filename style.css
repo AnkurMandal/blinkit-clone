@@ -21,6 +21,18 @@
     padding: 10px;
     background-color: transparent;
 }
+#my_cart{
+    background-color: green !important;
+    color: #F7FFF9;
+    border-radius: 8px;
+    height: 52px;
+    width: 112px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+}
 
 
 /* Hero Section */
@@ -39,6 +51,7 @@
 .list{
     white-space: nowrap;
     overflow-x:scroll;
+    width: 100%;
 }
 
 /* Categories Section */
@@ -50,65 +63,145 @@
     margin: auto;
 }
 #categories_list > img{
-    cursor: pointer;
+    cursor:pointer;
 }
 
 /* SubCategory Section */
-.my-category {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    overflow-x: scroll;
-    padding-bottom: 20px;
-}
-
-.category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Card section  */
-.my-card {
-    height: 300px;
+.my-card{
     width: 180px;
     margin-right: 20px;
     display: inline-block !important;
 }
-
-.my-card>img {
-    margin: auto;
-    width: 140px;
-    height: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.my-card>img{
+    margin:auto !important;
+    display: block;
 }
 
-.product_name {
-    font-size: 14px;
+.time_taken{
+    font-size: 9px;
+    background-color: rgb(248, 248, 248);
+    font-weight: 800;
+    width: fit-content;
+    padding: 2px 0px;    
+    border-radius: 5px;
+}
+
+.product_name{
+    overflow: hidden;
+    text-wrap:wrap !important;
+    color: rgb(31, 31, 31);
     font-weight: 600;
-    text-wrap: wrap;
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 18px;
+    width: 100%;
+    height: 36px;
+    margin-bottom: 6px;
 }
-
-.product_weight {
+.product_weight{
     font-size: 14px;
     color: gray;
     margin-top: 5px;
 }
-
-.product_price {
-    margin: 0;
+.product_price{
+    margin: 0px;
     padding: 0 !important;
     font-weight: 600;
+    font-size: 12px;
+}
+.btn{
+    background-color: #F7FFF9 !important;
 }
 
+.category-header > h4 {
+    color: rgb(28, 28, 28);
+    font-size: 24px;
+    font-weight: 600 !important;
+    line-height: 32px;
+}
+
+
 /* footer Section  */
-footer {
+.footer{
+    width: 85vw;
+    margin: auto;
+
+}
+#footer_r1{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+
+}
+#useful_links{
+    flex: 2;
+}
+#categories_links{
+    flex: 3;
+}
+a{
+    text-decoration: none !important;
+}
+table{
+    width: 100%;
+}
+td{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
+    color: #666666;
+}
+#footer_r2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#downloads{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right:125px;
+
+}
+#footer_r2>p{
+    width: 426px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    line-height: 18px;
+    margin: 12px;
+}
+#social-icons{
+    display: flex;
+    gap: 20px;
+}
+.social-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #1F1F1F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 15px;
+}
+#footer_r3{
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    line-height: 18px;
+    margin: 12px;
+}
+
+
+#made-by{
     width: 100vw;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 300px;
+    margin-bottom: 300px; 
 }
 
 
@@ -139,5 +232,29 @@ footer {
 
     #hero_section {
         display: none;
+    }
+    #footer_r3{
+        width: 90%;
+        text-align: justify;
+    }
+    #footer_r2{
+        flex-direction: column;
+    }
+    #footer_r2>p{
+        width: 100%;
+        text-align: justify;
+    }
+    #social-icons{
+        margin-top: 20px;
+    }
+    #footer_r1{
+        display: flex;
+        flex-direction: column;
+    }
+    #useful_links,#categories_links{
+        width: 100%;
+    }
+    td{
+        text-align: center;
     }
 }
